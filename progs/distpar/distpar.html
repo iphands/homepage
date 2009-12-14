@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link title="new" rel="stylesheet" href="/main.css" type="text/css">
+<title>Ian's Space -- Distpar</title>
+<style type="text/css">
+body {
+  font-family: sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+}
+h1 {
+  text-align: center;
+  font-variant: small-caps;
+}
+</style>
+</head><body>
+<h1>Distpar&hellip;</h1>
+<hr>
+<ul>
+<b>Distpar is a shell-script that I wrote to change the variables of the MAKEOPTS="-jN" option found in Gentoo's linux distro.</b>
+<li>You must lanuch the script with 3 arguments. (package-name low-jN high-jN)
+<!--<li>The script emerges gxine for testing you can change it by editing line 8.-->
+<li>This script is extremly helpful for testing/optimizing the number of parellel processes to start on a distcc farm.
+<li>The script will backup your make.conf and replace it when finished; but make a copy somewhere else just to be safe.
+<li>The script outputs a file in your home directory that shows a list of compile times whith each -jN.
+<!--<li>Don't forget to chmod 755 distpar2.sh so you can excecute it.-->
+<hr>
+<h3>Files&hellip;</h3>
+<li><a class="reglink" href="/progs/distpar/distpar.sh">Distpar script</a>
+<li><a class="reglink" href="/progs/distpar/testing/make.conf">A sample make.conf</a>
+</body>
+</html>
