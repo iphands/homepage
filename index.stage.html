@@ -15,6 +15,34 @@
       $(".faded").css("opacity", "0");
       $(".faded").animate({ opacity: 1}, 5500);      
       
+      $("#hands_img").hover(
+
+      //494 x 262
+
+      function() {
+      $("#hands_img").animate({ 
+      width: '565px',
+      height: '300px',
+      }, 200);
+      },
+
+      function() {
+      $("#hands_img").animate({ 
+      width: '494px',
+      height: '262px',
+      }, 200);
+      }
+
+      );
+      
+      // $("#hands_img").hover(function() {
+      // $("#hands_img".animate({
+      // width: '100px';
+      // height: '100px';      
+      // });
+      // }
+
+
       /*
       $("#hands_img").animate({ opacity: 1}, 3500);      
       $("#creative_commons_img").animate({ opacity: 1}, 8500);
