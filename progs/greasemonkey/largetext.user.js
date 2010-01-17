@@ -2,27 +2,9 @@
 // @name           LargeText
 // @namespace      Ian Hands
 // @description    Increase text size for Yo Adrian
-// @include        http://www.alsforums.com/*
-// @include        http://www.als.net/*
+// @include        *alsforums.com*
+// @include        *als.net*
 // ==/UserScript==
-
-/*
-  function toggle_size(type, state)
-  {
-
-  if (state)
-  myFontSize = '';
-  else
-  myFontSize = 'xx-large';
-
-  var elements = document.getElementsByTagName(type);
-  for (var i = 0, x = elements.length; i < x; i++)
-  {
-  elements[i].style.fontSize = myFontSize;
-  }
-  }
-*/
-
 
 unsafeWindow.iphands_toggle_size = function(type)
 {
@@ -60,6 +42,7 @@ unsafeWindow.saveSettings = function()
     settings = settings + document.getElementById("p_state").innerHTML;
     settings = settings + document.getElementById("a_state").innerHTML;
     settings = settings + document.getElementById("td_state").innerHTML;
+    settings = settings + document.getElementById("span_state").innerHTML;
 
     document.cookie = "_iphands_settings="+ settings  +"; expires=Fri, 17 Dec 2050 10:00:00 GMT; path=/";
 
@@ -89,6 +72,9 @@ function top_bar(settings)
 	// td button
 	'<td><input style="font-size: xx-large;" id="td_button" type="button" value="td" onclick="iphands_toggle_size(\'td\')"></input></td>' +
 
+	// span button
+	'<td><input style="font-size: xx-large;" id="span_button" type="button" value="span" onclick="iphands_toggle_size(\'span\')"></input></td>' +
+
 	// seperator
 	'<td> </td>' +
 
@@ -104,6 +90,7 @@ function top_bar(settings)
 	'<a id="p_state" style="visibility: hidden">0</a>' +
 	'<a id="a_state" style="visibility: hidden">0</a>' +
 	'<a id="td_state" style="visibility: hidden">0</a>' +
+	'<a id="span_state" style="visibility: hidden">0</a>' +
 	'\n';
     
     var firstBodyElem = document.getElementsByTagName('body')[0].childNodes[0];
@@ -134,11 +121,14 @@ function init(settings)
 
     if (settings[3] == 1)
 	unsafeWindow.iphands_toggle_size('td');
+
+    if (settings[4] == 1)
+	unsafeWindow.iphands_toggle_size('span');
 }
 
 var my_settings = get_cookie("_iphands_settings");
 if (my_settings == "")
-    my_settings = "0000";
+    my_settings = "00000";
 
 top_bar(my_settings);
 init(my_settings);
