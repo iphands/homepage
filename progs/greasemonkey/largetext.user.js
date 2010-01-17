@@ -3,6 +3,7 @@
 // @namespace      Ian Hands
 // @description    Increase text size for Yo Adrian
 // @include        http://www.alsforums.com/*
+// @include        http://www.als.net/*
 // ==/UserScript==
 
 /*
@@ -32,7 +33,7 @@ unsafeWindow.iphands_toggle_size = function(type, state)
 	}
     else
 	{
-	    myFontSize = 'xx-large';
+	    myFontSize = 'xx-large';	    
 	    state = 1;
 	}
 
@@ -40,6 +41,8 @@ unsafeWindow.iphands_toggle_size = function(type, state)
     for (var i = 0, x = elements.length; i < x; i++)
 	{
 	    elements[i].style.fontSize = myFontSize;
+	    elements[i].style.color = "black";
+	    
 	}
 
 };
@@ -64,3 +67,4 @@ function top_bar()
 
 //top_bar();
 unsafeWindow.iphands_toggle_size('div', 0);
+unsafeWindow.iphands_toggle_size('td', 0);
