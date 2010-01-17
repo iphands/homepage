@@ -59,11 +59,11 @@ function top_bar()
     var menuTable = document.createElement('center');
     menuTable.id = 'iphands_menuTable';
     menuTable.innerHTML = '<table>' +
-	'<tr>' +
-	'<td><input id="div_button" type="button" value="div" onclick="iphands_toggle_size(\'div\')"></input></td>' +
-	'<td><input id="p_button" type="button" value="p" onclick="iphands_toggle_size(\'p\')"></input></td>' +
-	'<td><input id="a_button" type="button" value="a" onclick="iphands_toggle_size(\'a\')"></input></td>' +
-	'<td><input id="td_button" type="button" value="td" onclick="iphands_toggle_size(\'td\')"></input></td>' +
+	'<tr>' +	
+	'<td><input style="font-size: xx-large;" id="div_button" type="button" value="div" onclick="iphands_toggle_size(\'div\')"></input></td>' +
+	'<td><input style="font-size: xx-large;" id="p_button" type="button" value="p" onclick="iphands_toggle_size(\'p\')"></input></td>' +
+	'<td><input style="font-size: xx-large;" id="a_button" type="button" value="a" onclick="iphands_toggle_size(\'a\')"></input></td>' +
+	'<td><input style="font-size: xx-large;" id="td_button" type="button" value="td" onclick="iphands_toggle_size(\'td\')"></input></td>' +
 	'</tr>' +
 	'</table>' +
 	'<a id="div_state" style="visibility: hidden">0</a>'+
