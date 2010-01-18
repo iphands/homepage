@@ -4,6 +4,7 @@
 // @description    Increase text size for Yo Adrian
 // @include        *alsforums.com*
 // @include        *als.net*
+// @include        *facebook.com*
 // ==/UserScript==
 
 unsafeWindow.iphands_toggle_size = function(type)
@@ -56,41 +57,45 @@ function top_bar(settings)
 
     var menuTable = document.createElement('center');
     menuTable.id = 'iphands_menuTable';
-    menuTable.innerHTML = '<table>' +
-	//'<tr style="background:#dfd3d3 url(data:image/jpeg;base64,'+ hands_image +') no-repeat scroll right center">' +
-	'<tr'+
+    menuTable.innerHTML = // '<span onMouseOver="document.getElementById(\'_iphands_menu_table\').style.display = \'block\'">-</span>' +
+	// '\n<table id="_iphands_menu_table" style="display: none">\n' +
+	'\n<table id="_iphands_menu_table">\n' +
+	'\t<tbody>\n' +
+	//'<tr style="background:#dfd3d3 url(data:image/jpeg;base64,'+ hands_image +') no-repeat scroll right center">\n' +
+	'\t\t<tr>\n'+
 
 	// div button
-	'<td><input style="font-size: xx-large;" id="div_button" type="button" value="div" onclick="iphands_toggle_size(\'div\')"></input></td>' +
+	'\t\t\t<td><input style="font-size: xx-large;" id="div_button" type="button" value="div" onclick="iphands_toggle_size(\'div\')"></input></td>\n' +
 
 	// p button
-	'<td><input style="font-size: xx-large;" id="p_button" type="button" value="p" onclick="iphands_toggle_size(\'p\')"></input></td>' +
+	'\t\t\t<td><input style="font-size: xx-large;" id="p_button" type="button" value="p" onclick="iphands_toggle_size(\'p\')"></input></td>\n' +
 
 	// a button
-	'<td><input style="font-size: xx-large;" id="a_button" type="button" value="a" onclick="iphands_toggle_size(\'a\')"></input></td>' +
+	'\t\t\t<td><input style="font-size: xx-large;" id="a_button" type="button" value="a" onclick="iphands_toggle_size(\'a\')"></input></td>\n' +
 
 	// td button
-	'<td><input style="font-size: xx-large;" id="td_button" type="button" value="td" onclick="iphands_toggle_size(\'td\')"></input></td>' +
+	'\t\t\t<td><input style="font-size: xx-large;" id="td_button" type="button" value="td" onclick="iphands_toggle_size(\'td\')"></input></td>\n' +
 
 	// span button
-	'<td><input style="font-size: xx-large;" id="span_button" type="button" value="span" onclick="iphands_toggle_size(\'span\')"></input></td>' +
+	'\t\t\t<td><input style="font-size: xx-large;" id="span_button" type="button" value="span" onclick="iphands_toggle_size(\'span\')"></input></td>\n' +
 
 	// seperator
-	'<td> </td>' +
+	'\t\t\t<td> </td>\n' +
 
 	// save button
-	// '<td><input style="font-size: xx-large;" id="save_button" type="button" value="save" onclick="saveSettings()"></input></td>' +
+	// '\t\t\t<td><input style="font-size: xx-large;" id="save_button" type="button" value="save" onclick="saveSettings()"></input></td>\n' +
 
 	// save image
-	'<td><img src="data:image/gif;base64,'+ hands_image +'" onclick="saveSettings()" alt="save" /></td>' +
+	'\t\t\t<td><img src="data:image/gif;base64,'+ hands_image +'" onclick="saveSettings()" alt="save" /></td>\n' +
 
-	'</tr>' +
-	'</table>' +
-	'<a id="div_state" style="visibility: hidden">0</a>' +
-	'<a id="p_state" style="visibility: hidden">0</a>' +
-	'<a id="a_state" style="visibility: hidden">0</a>' +
-	'<a id="td_state" style="visibility: hidden">0</a>' +
-	'<a id="span_state" style="visibility: hidden">0</a>' +
+	'\t\t</tr>\n' +
+	'\t</tbody>\n' +
+	'</table>\n' +
+	'<a id="div_state" style="visibility: hidden">0</a>\n' +
+	'<a id="p_state" style="visibility: hidden">0</a>\n' +
+	'<a id="a_state" style="visibility: hidden">0</a>\n' +
+	'<a id="td_state" style="visibility: hidden">0</a>\n' +
+	'<a id="span_state" style="visibility: hidden">0</a>\n' +
 	'\n';
     
     var firstBodyElem = document.getElementsByTagName('body')[0].childNodes[0];
