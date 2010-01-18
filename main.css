@@ -8,6 +8,11 @@ a.reglink:visited { color: #555588; text-decoration: none; }
 a.reglink:hover { color: #ababab; text-decoration: none; }
 a.reglink:active { color: #ababab; text-decoration: none; }
 
+a:link { color: #aaaaff; text-decoration: none; }
+a:visited { color: #555588; text-decoration: none; }
+a:hover { color: #ababab; text-decoration: none; }
+a:active { color: #ababab; text-decoration: none; }
+
 .menu {
     font-size: 1.2em;
     font-weight: bold;
@@ -26,8 +31,10 @@ body {
     color: white;
     background-color: black;
     padding: 0% 5% 0% 5%;
-    border-color: grey;
 
+    background-image:url(/images/backtest.png); 
+    background-attachment:fixed;
+    background-repeat: repeat-x; 
 }
 
 img {
