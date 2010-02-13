@@ -13,6 +13,17 @@ a:visited { color: #555588; text-decoration: none; }
 a:hover { color: #ababab; text-decoration: none; }
 a:active { color: #ababab; text-decoration: none; }
 
+table.codebox {
+    color: black;
+    background-color: white;
+    border-color: grey;
+    border-style: dashed;
+    padding: 1em;
+    font-family: courier;
+    /* font-weight: bold; */
+    font-size: large;
+}
+
 .menu {
     font-size: 1.2em;
     font-weight: bold;
@@ -48,6 +59,7 @@ img.faded {
 h1 {
     text-align: center;
 }
+
 .btw {
     font-size: 100%;
     border: groove;
