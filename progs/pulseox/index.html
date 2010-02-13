@@ -15,19 +15,22 @@
     <ul>
       <li>This project is dedicated to my <a href="http://cycling.ahands.org/">father</a>, <a href="http://www.adrianhandssociety.com/">Yo Adrian!</a> (he is the best :-D).</li>
       <li>Notes on the device</li>
-      <ul>
-	<li>The CMS-50e sets up a USB serial character device. The character device speaks a very simple protocol.</li>
-	<li>There is basically a 5 byte stream/sequence of data:</li>
-	<ol>
-	  <li>(127-???) The first byte has and interger value greater than 127, all other values seem to be 7-bit only (ignoring the most significant bit).</li>
-	  <li>(0-127) The next byte is the y-axis for the wave form.</li>
-	  <li>(0-10 ?) Unknown.</li>
-	  <li>(0-127) This byte is the detected heart rate. What is interesting here is that human hearts can easily beat > 127 bpm. So at 128 bpm the device sends a 0, but the device (and my program) adds 128 when displaying the number. There must be a cutoff somewhere (where the 128 stops being added), but I have been unable to detect where (I can't get my heart rate to 200, or <= 40. I have assumed the cutoff is 40&hellip</li>
-	  <li>(0-99) This byte is the detected oxygen saturation.</li>
-	</ol>
-	<li>The serial device operates at 19200 baud</li>
-      </ul>
-
+      <li>
+	<ul>
+	  <li>The CMS-50e sets up a USB serial character device. The character device speaks a very simple protocol.</li>
+	  <li>There is basically a 5 byte stream/sequence of data:</li>
+	  <li>
+	    <ol>
+	      <li>(128-???) The first byte has and interger value greater than 127, all other values seem to be 7-bit only (ignoring the most significant bit).</li>
+	      <li>(0-127) The next byte is the y-axis for the wave form.</li>
+	      <li>(0-10 ?) Unknown.</li>
+	      <li>(0-127) This byte is the detected heart rate. What is interesting here is that human hearts can easily beat > 127 bpm. So at 128 bpm the device sends a 0, but the device (and my program) adds 128 when displaying the number. There must be a cutoff somewhere (where the 128 stops being added), but I have been unable to detect where (I can't get my heart rate to 200, or <= 40. I have assumed the cutoff is 40&hellip;</li>
+																																																      <li>(0-99) This byte is the detected oxygen saturation.</li>
+	    </ol>
+	  </li>
+	  <li>The serial device operates at 19200 baud</li>
+	</ul>
+      </li>
       <li>Access the <a href="http://github.com/iphands/PulseOx">git repo</a>  on github</li>
       <li>Building / Running instructions
 	<table class="codebox">
