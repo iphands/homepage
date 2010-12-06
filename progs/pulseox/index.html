@@ -39,7 +39,9 @@
 	      <code class="codebox">
 		$ git clone http://github.com/iphands/PulseOx.git<br>
 		$ cd PulseOx/workspace/PulseOx/<br>
-		$ mkdir -p jars ; cp /path_to_your_swt.jar ./jars<br>
+		$ mkdir -p jars<br>
+		$ ln -s /path_to_your_swt.jar ./jars/<br>
+		$ ln -s /path_to_your_log4j.jar ./jars/<br>
 		$ ant<br>
 		$ java -jar pulseox.jar<br>
 	      </code>
